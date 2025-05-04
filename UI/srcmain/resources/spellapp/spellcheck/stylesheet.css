@@ -1,0 +1,18 @@
+.misspelled-word {
+    -fx-fill: red; /* Red text color for misspelled words */
+    -fx-underline: true; /* Underline for emphasis */
+}
+
+.normal-word {
+    -fx-fill: black; /* Regular text color */
+    -fx-underline: false; /* No underline */
+}
+
+.double-word{
+    -fx-fill: blue; /* Regular text color */
+    -fx-underline: false; /* No underline */
+}
+.capital-word{
+    -fx-fill: green; /* Regular text color */
+    -fx-underline: false; /* No underline */
+}

@@ -1,0 +1,40 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "word_object_test",
+            "request": "launch",
+            "mainClass": "spellapp.spellcheck/tests.word_object_test",
+            "projectName": "SpellCheck"
+        },
+        {
+            "type": "java",
+            "name": "Linked_List",
+            "request": "launch",
+            "mainClass": "spellapp.spellcheck/tests.Linked_List",
+            "projectName": "SpellCheck"
+        },
+        {
+            "type": "java",
+            "name": "Document_test",
+            "request": "launch",
+            "mainClass": "spellapp.spellcheck/tests.Document_test",
+            "projectName": "SpellCheck"
+        },
+        {
+            "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "spellapp.spellcheck/spellapp.spellcheck.Main",
+            "projectName": "SpellCheck"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "cwd": "${workspaceFolder}/UI/src/main/java/spellapp/spellcheck",
+            "mainClass": "${file}"
+        }
+    ]
+}

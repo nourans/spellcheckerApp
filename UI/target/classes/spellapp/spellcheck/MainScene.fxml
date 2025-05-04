@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<?import org.fxmisc.richtext.StyleClassedTextArea?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="594.0" prefWidth="723.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="spellapp.spellcheck.MainSceneController">
+    <top>
+        <ToolBar prefHeight="57.0" prefWidth="600.0" style="-fx-background-color: #D3E3EE;" BorderPane.alignment="CENTER">
+            <items>
+                <!-- Add fx:id to the "Save" button and set onAction attribute -->
+                <Button fx:id="saveButton" mnemonicParsing="false" onAction="#handleSaveButton" style="-fx-background-radius: 20;" text="Save" />
+                <Button mnemonicParsing="false" onAction="#openHelp" style="-fx-background-radius: 20;" text="Help" />
+                <Button fx:id="saveButton1" layoutX="10.0" layoutY="20.0" mnemonicParsing="false" onAction="#exit" style="-fx-background-radius: 20;" text="Exit" />
+            </items>
+        </ToolBar>
+    </top>
+   <right>
+      <Pane prefHeight="537.0" prefWidth="200" style="-fx-background-color: #DDDDDD;" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="13.0" layoutY="20.0" strokeLineCap="BUTT" strokeWidth="0.0" text="Metrics" textAlignment="CENTER">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Text>
+            <Pane layoutX="8.0" layoutY="49.0" prefHeight="124.0" prefWidth="175.0" style="-fx-background-color: #EEEEEE; -fx-background-radius: 20;">
+               <children>
+                  <Label layoutX="7.0" layoutY="13.0" prefHeight="27.0" prefWidth="66.0" text="Counts">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                     <Label fx:id="characterCountLabel" layoutX="6.0" layoutY="37.0" text="Character count: 0" />
+                     <Label fx:id="lineCountLabel" layoutX="6.0" layoutY="57.0" text="Line count: 0" />
+                     <Label fx:id="wordCountLabel" layoutX="7.0" layoutY="79.0" text="Word count: 0" />
+               </children>
+            </Pane>
+            <Pane layoutX="9.0" layoutY="199.0" prefHeight="124.0" prefWidth="175.0" style="-fx-background-color: #EEEEEE; -fx-background-radius: 20;">
+               <children>
+                  <Label layoutX="7.0" layoutY="13.0" prefHeight="27.0" prefWidth="66.0" text="Errors">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="Misspellings" layoutX="6.0" layoutY="37.0" text="Misspellings: 0" />
+                  <Label fx:id="MissCaps" layoutX="6.0" layoutY="57.0" text="Miscapitalizations: 0" />
+                  <Label fx:id="DoubleWords" layoutX="7.0" layoutY="79.0" text="Double words: 0" />
+               </children>
+            </Pane>
+            <Pane layoutX="8.0" layoutY="350.0" prefHeight="125.0" prefWidth="175.0" style="-fx-background-color: #EEEEEE; -fx-background-radius: 20;">
+               <children>
+                  <Label layoutX="7.0" layoutY="13.0" prefHeight="27.0" prefWidth="100.0" text="Corrections">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="MisspellingCorrections" layoutX="6.0" layoutY="37.0" text="" />
+                  <Label fx:id="Corrections" layoutX="6.0" layoutY="57.0" text="" />
+                  <Label fx:id="DoubleWordCorrections" layoutX="7.0" layoutY="79.0" text="" />
+                  <Label fx:id="corrected_capital" layoutX="7.0" layoutY="100.0" text="" />
+               </children>
+            </Pane>
+            <Pane layoutX="8.0" layoutY="500.0" prefHeight="200.0" prefWidth="175.0" style="-fx-background-color: #EEEEEE; -fx-background-radius: 20;">
+    <children>
+        <Label layoutX="7.0" layoutY="13.0" prefHeight="27.0" prefWidth="128.0" text="User Dictionary" wrapText="true">
+            <font>
+                <Font name="System Bold" size="13.0" />
+            </font>
+        </Label>
+        <Label fx:id="userWords" layoutX="6.0" layoutY="50.0" prefHeight="95.0" prefWidth="175.0" text="User_words" wrapText="true" />
+        <Button layoutX="6.0" layoutY="155.0" onAction="#clear_user_dict" mnemonicParsing="false" style="-fx-background-radius: 20;" text="Clear User Dictionary" prefHeight="40.0" prefWidth="130.0" />
+    </children>
+</Pane>
+         </children>
+      </Pane>
+   </right>
+   <center>
+      <Pane fx:id="textAreaContainer" prefHeight="327.0" prefWidth="478.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

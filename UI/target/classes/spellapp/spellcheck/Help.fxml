@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane fx:id="help" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="317.0" prefWidth="324.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="spellapp.spellcheck.HelpController">
+   <center>
+      <Pane prefHeight="272.0" prefWidth="324.0" style="-fx-background-color: #EEEEEE;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane layoutX="19.0" layoutY="7.0" prefHeight="212.0" prefWidth="287.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+               <children>
+                  <Text layoutX="14.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1. Import a text file or create a new file&#10;&#10;2. Click: spell check to check your file for errors&#10;&#10;3. Hover over errors to see suggested changes, add to user dictionary, or to ignore the error&#10;&#10;4. Click user dictionary to remove words from the user dictionary or reset&#10;&#10;5. Click save to save your file" wrappingWidth="261.373046875" />
+               </children>
+            </Pane>
+            <Button fx:id="closeHelpButton" layoutX="241.0" layoutY="236.0" mnemonicParsing="false" onAction="#CloseHelp" text="Close" />
+         </children>
+      </Pane>
+   </center>
+   <top>
+      <Pane prefHeight="44.0" prefWidth="324.0" style="-fx-background-color: #EEEEEE;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="47.0" layoutY="4.0" prefHeight="34.0" prefWidth="231.0" text="How to Use Spell Check">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </top>
+</BorderPane>
